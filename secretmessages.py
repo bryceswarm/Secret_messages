@@ -9,8 +9,7 @@ import os
 from affine_cipher import Affine
 from caesar_cipher import Caesar
 from keyword_cipher import Keyword
-
-from Secret_messages.atbash_cipher import Atbash
+from atbash_cipher import Atbash
 
 
 # clear the command screen
@@ -36,7 +35,7 @@ def secret_messages():
         'D' : 'Decrypt'
     }
 
-    cipher_list = [''.join((key[0], *key[1:].lower())) for key in cipher_dict]
+    cipher_list = [''.join(key.title()) for key in cipher_dict]
 
     while True:
         clear_screen()
