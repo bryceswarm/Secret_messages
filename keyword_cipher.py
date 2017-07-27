@@ -29,7 +29,7 @@ class Keyword(Cipher):
     # Creates the alphabet, with keyword first followed by alphabet missing letters in the keyword
     def alphabet_removed(self):
         for letter in self.user_keyword:
-            if letter in self.alphabet:
+            if letter in self.removed_alphabet:
                 self.removed_alphabet.remove(letter)
         output = (self.user_keyword + self.removed_alphabet)
         return output
